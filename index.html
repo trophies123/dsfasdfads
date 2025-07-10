@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Видео на весь экран</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted playsinline>
+        <!-- Замените на ссылку к вашему видео -->
+        <source src="заставка.mp4" type="video/mp4">
+        Ваш браузер не поддерживает HTML5 видео.
+    </video>
+
+    <script>
+        // Автоматическое воспроизведение (если не сработало через атрибуты)
+        document.querySelector('video').play().catch(e => console.log(e));
+    </script>
+</body>
+</html>
